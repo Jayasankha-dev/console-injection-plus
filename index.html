@@ -6,6 +6,68 @@
     <title>Console Injection+ | Live Terminal</title>
 	<a href="https://chromewebstore.google.com/detail/odcpgbablphlgghjlfinipbpcgijdahk?utm_source=item-share-cb" class="header-download-btn">Download Extension</a>
     <style>
+	/* Floating Button Base */
+.floating-wa {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.floating-wa:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.6);
+}
+
+
+.floating-wa .tooltip {
+    position: absolute;
+    right: 75px;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--accent);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    border: 1px solid var(--accent);
+}
+
+.floating-wa:hover .tooltip {
+    opacity: 1;
+}
+
+
+.glow-ping {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent);
+    border-radius: 50%;
+    z-index: -1;
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
 	header {
     display: flex;
     justify-content: space-between; 
@@ -123,7 +185,12 @@
             <h1>CONSOLE INJECTION+</h1>
             <p id="loader-msg" style="color: var(--accent); font-size: 12px; margin-top: 5px;">LIVE TERMINAL ACTIVE v6.1</p>
         </div>
-
+<a href="https://wa.me/94789358096" class="floating-wa" target="_blank">
+    <div class="glow-ping"></div>
+    <i class="fab fa-whatsapp"></i>
+	<span class="float-symbol">💬</span>
+    <span class="tooltip">Custom Script? Contact Me</span>
+</a>
         <div class="container">
             
             <div class="cat-title">>_ Security Engines</div>
