@@ -1,0 +1,63 @@
+.wp-block-cover__background,
+.wp-block-cover:has(a[href*="ad"]),
+div[class*="wp-block-button"]:has(a[href*="redirect"]),
+.wp-block-post-comments,
+[style*="z-index: 2000"],
+[style*="z-index: 1999"],
+[class*="overlay"],
+[id*="overlay"],
+.video_ad,
+.video_ad_fadein,
+div[style*="opacity: 0"],
+div[style*="background: none"]:not(:has(video)) {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+
+.play_limit_box,
+.over_player_msg,
+[class*="uploadv"],
+input[opacity="0"],
+.xfname {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+
+div[class*='E5IaTEuzNAtsJSrBDlFn'],
+div.qg54XWSzHQRhG1ssz3ej,
+div.vast_player,
+a.vast_player_click_link,
+div.vast_player_content,
+[data-izone],
+.E5IaTEu,
+[id*="ad-"],
+.popunder,
+.floating-ad {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: absolute !important;
+    top: -9999px !important;
+}
+
+
+div[style*="z-index: 2147483647"] {
+    display: none !important;
+}
+
+
+div[data-izone="main"], 
+div[class*="skin__adBadge"], 
+div[class*="skin__wrap"] {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+iframe, video {
+    pointer-events: auto !important;
+}
