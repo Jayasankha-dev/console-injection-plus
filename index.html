@@ -55,7 +55,7 @@
 
         .cat-title {
             color: var(--accent); border-left: 3px solid var(--accent);
-            padding-left: 10px; margin: 40px 0 15px 0; font-size: 1.1rem;
+            padding-left: 10px; margin: 30px 0 15px 0; font-size: 1.1rem;
             letter-spacing: 2px; text-transform: uppercase;
         }
 
@@ -75,7 +75,21 @@
             text-transform: uppercase; font-weight: bold; margin-top: 15px;
         }
 
-        .copy-btn:hover { background: var(--accent); color: #000; }
+        /* Filter button styling */
+        .filter-btn {
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px dashed var(--accent);
+            color: var(--accent);
+            padding: 6px 15px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 11px;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        .copy-btn:hover, .filter-btn:hover { background: var(--accent); color: #000; }
         
         .tag { font-size: 10px; color: var(--accent); border: 1px solid var(--accent); padding: 1px 4px; float: right; }
     </style>
@@ -116,32 +130,27 @@
                 <div class="script-card"><h3>Floating Super <span class="tag">BOT</span></h3><button class="copy-btn" onclick="copyCode('Floating Super Bot.js')">Copy Script</button></div>
             </div>
 
-            <div class="cat-title">>_ Visual & CSS Filters</div>
+            <div class="cat-title">>_ Site Unlockers</div>
             <div class="script-grid">
                 <div class="script-card">
-                    <h3>Cineru.lk Fix <span class="tag">CSS</span></h3>
-                    <p style="color: #aaa; font-size: 13px;">Removes donate banners and center logo clutter.</p>
-                    <button class="copy-btn" onclick="copyCode('cineru_filter.js')">Copy Filter</button>
+                    <h3>Cineru.lk <span class="tag">BYPASS</span></h3>
+                    <button class="filter-btn" onclick="copyFilter('cineru_filter.css')">Copy Filter</button>
+                    <button class="copy-btn" onclick="copyCode('Cineru.lk.js')">Copy Script</button>
                 </div>
                 <div class="script-card">
-                    <h3>Walakatha Cleaner <span class="tag">CSS</span></h3>
-                    <p style="color: #aaa; font-size: 13px;">Removes popups, ad layers, and clears blurs.</p>
-                    <button class="copy-btn" onclick="copyCode('walakatha_filter.js')">Copy Filter</button>
+                    <h3>Sinhalawal <span class="tag">BYPASS</span></h3>
+                    <button class="filter-btn" onclick="copyFilter('sinhalawal_filter.css')">Copy Filter</button>
+                    <button class="copy-btn" onclick="copyCode('Sinhalawal.com.js')">Copy Script</button>
                 </div>
                 <div class="script-card">
-                    <h3>PornXnow Bypass <span class="tag">CSS</span></h3>
-                    <p style="color: #aaa; font-size: 13px;">Blocks VAST players and invisible overlays.</p>
-                    <button class="copy-btn" onclick="copyCode('pornxnow_filter.js')">Copy Filter</button>
+                    <h3>Walakatha <span class="tag">BYPASS</span></h3>
+                    <button class="filter-btn" onclick="copyFilter('walakatha_filter.css')">Copy Filter</button>
+                    <button class="copy-btn" onclick="copyCode('Walakatha.com.js')">Copy Script</button>
                 </div>
                 <div class="script-card">
-                    <h3>Sinhalawal Fix <span class="tag">CSS</span></h3>
-                    <p style="color: #aaa; font-size: 13px;">Removes ad layers and unlocks page scrolling.</p>
-                    <button class="copy-btn" onclick="copyCode('sinhalawal_filter.js')">Copy Filter</button>
-                </div>
-                <div class="script-card">
-                    <h3>Universal Cleaner <span class="tag">FIX</span></h3>
-                    <p style="color: #aaa; font-size: 13px;">Removes grayscale and blur effects universally.</p>
-                    <button class="copy-btn" onclick="copyCode('css_filter_cleaner.js')">Copy Filter</button>
+                    <h3>PornXnow <span class="tag">BYPASS</span></h3>
+                    <button class="filter-btn" onclick="copyFilter('pornxnow_filter.css')">Copy Filter</button>
+                    <button class="copy-btn" onclick="copyCode('PornXnow.me.js')">Copy Script</button>
                 </div>
             </div>
 
@@ -169,12 +178,10 @@
         }
         setInterval(createLine, 900);
 
-        // Fetch & Copy Logic
+        // Fetch & Copy Logic (Original)
         async function copyCode(fileName) {
             const msg = document.getElementById('loader-msg');
             msg.innerText = "FETCHING_DATA...";
-            msg.style.color = "var(--accent)";
-
             try {
                 const response = await fetch(`./scripts/${fileName}`); 
                 if (!response.ok) throw new Error("File not found");
@@ -187,6 +194,28 @@
                 msg.innerText = "ERROR: FILE_NOT_FOUND";
                 msg.style.color = "#ff4d4d";
                 console.error("Fetch Error:", err);
+                setTimeout(() => { 
+                    msg.innerText = "LIVE TERMINAL ACTIVE v6.1"; 
+                    msg.style.color = "var(--accent)"; 
+                }, 3000);
+            }
+        }
+
+        // New Fetch & Copy Filter (Pure CSS)
+        async function copyFilter(fileName) {
+            const msg = document.getElementById('loader-msg');
+            msg.innerText = "FETCHING_FILTER...";
+            try {
+                const response = await fetch(`./scripts/${fileName}`); 
+                if (!response.ok) throw new Error("Filter file not found");
+                const text = await response.text();
+                await navigator.clipboard.writeText(text);
+                
+                msg.innerText = "SUCCESS: FILTER_COPIED";
+                setTimeout(() => msg.innerText = "LIVE TERMINAL ACTIVE v6.1", 2000);
+            } catch (err) {
+                msg.innerText = "ERROR: FILTER_NOT_FOUND";
+                msg.style.color = "#ff4d4d";
                 setTimeout(() => { 
                     msg.innerText = "LIVE TERMINAL ACTIVE v6.1"; 
                     msg.style.color = "var(--accent)"; 
