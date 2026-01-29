@@ -69,24 +69,19 @@
 
         .script-card:hover { border-color: var(--accent); box-shadow: 0 0 20px rgba(0, 255, 136, 0.2); }
 
-        .copy-btn {
+        /* Button Base Styles */
+        .copy-btn, .filter-btn {
             background: transparent; border: 1px solid var(--accent);
             color: var(--accent); padding: 8px 20px; cursor: pointer;
-            text-transform: uppercase; font-weight: bold; margin-top: 15px;
+            text-transform: uppercase; font-weight: bold; margin-top: 10px;
+            font-size: 12px; transition: 0.2s;
         }
 
-        /* Filter button styling */
+        /* Highlight Filter Button slightly different */
         .filter-btn {
-            background: rgba(0, 255, 136, 0.1);
-            border: 1px dashed var(--accent);
-            color: var(--accent);
-            padding: 6px 15px;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 11px;
-            margin-bottom: 5px;
-            margin-top: 10px;
+            background: rgba(0, 255, 136, 0.05);
+            border-style: dashed;
+            margin-top: 15px;
         }
 
         .copy-btn:hover, .filter-btn:hover { background: var(--accent); color: #000; }
@@ -134,23 +129,23 @@
             <div class="script-grid">
                 <div class="script-card">
                     <h3>Cineru.lk <span class="tag">BYPASS</span></h3>
-                    <button class="filter-btn" onclick="copyFilter('cineru_filter.css')">Copy Filter</button>
-                    <button class="copy-btn" onclick="copyCode('Cineru.lk.js')">Copy Script</button>
+                    <button class="filter-btn" onclick="copyCode('cineru_filter.css')">Copy Filter (CSS)</button>
+                    <button class="copy-btn" onclick="copyCode('Cineru.lk.js')">Copy Script (JS)</button>
                 </div>
                 <div class="script-card">
                     <h3>Sinhalawal <span class="tag">BYPASS</span></h3>
-                    <button class="filter-btn" onclick="copyFilter('sinhalawal_filter.css')">Copy Filter</button>
-                    <button class="copy-btn" onclick="copyCode('Sinhalawal.com.js')">Copy Script</button>
+                    <button class="filter-btn" onclick="copyCode('sinhalawal_filter.css')">Copy Filter (CSS)</button>
+                    <button class="copy-btn" onclick="copyCode('Sinhalawal.com.js')">Copy Script (JS)</button>
                 </div>
                 <div class="script-card">
                     <h3>Walakatha <span class="tag">BYPASS</span></h3>
-                    <button class="filter-btn" onclick="copyFilter('walakatha_filter.css')">Copy Filter</button>
-                    <button class="copy-btn" onclick="copyCode('Walakatha.com.js')">Copy Script</button>
+                    <button class="filter-btn" onclick="copyCode('walakatha_filter.css')">Copy Filter (CSS)</button>
+                    <button class="copy-btn" onclick="copyCode('Walakatha.com.js')">Copy Script (JS)</button>
                 </div>
                 <div class="script-card">
                     <h3>PornXnow <span class="tag">BYPASS</span></h3>
-                    <button class="filter-btn" onclick="copyFilter('pornxnow_filter.css')">Copy Filter</button>
-                    <button class="copy-btn" onclick="copyCode('PornXnow.me.js')">Copy Script</button>
+                    <button class="filter-btn" onclick="copyCode('pornxnow_filter.css')">Copy Filter (CSS)</button>
+                    <button class="copy-btn" onclick="copyCode('PornXnow.me.js')">Copy Script (JS)</button>
                 </div>
             </div>
 
@@ -178,10 +173,12 @@
         }
         setInterval(createLine, 900);
 
-        // Fetch & Copy Logic (Original)
+        // Fetch & Copy Logic
         async function copyCode(fileName) {
             const msg = document.getElementById('loader-msg');
             msg.innerText = "FETCHING_DATA...";
+            msg.style.color = "var(--accent)";
+            
             try {
                 const response = await fetch(`./scripts/${fileName}`); 
                 if (!response.ok) throw new Error("File not found");
@@ -194,28 +191,6 @@
                 msg.innerText = "ERROR: FILE_NOT_FOUND";
                 msg.style.color = "#ff4d4d";
                 console.error("Fetch Error:", err);
-                setTimeout(() => { 
-                    msg.innerText = "LIVE TERMINAL ACTIVE v6.1"; 
-                    msg.style.color = "var(--accent)"; 
-                }, 3000);
-            }
-        }
-
-        // New Fetch & Copy Filter (Pure CSS)
-        async function copyFilter(fileName) {
-            const msg = document.getElementById('loader-msg');
-            msg.innerText = "FETCHING_FILTER...";
-            try {
-                const response = await fetch(`./scripts/${fileName}`); 
-                if (!response.ok) throw new Error("Filter file not found");
-                const text = await response.text();
-                await navigator.clipboard.writeText(text);
-                
-                msg.innerText = "SUCCESS: FILTER_COPIED";
-                setTimeout(() => msg.innerText = "LIVE TERMINAL ACTIVE v6.1", 2000);
-            } catch (err) {
-                msg.innerText = "ERROR: FILTER_NOT_FOUND";
-                msg.style.color = "#ff4d4d";
                 setTimeout(() => { 
                     msg.innerText = "LIVE TERMINAL ACTIVE v6.1"; 
                     msg.style.color = "var(--accent)"; 
