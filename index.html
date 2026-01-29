@@ -155,21 +155,29 @@
 
         // --- GitHub Fetch Logic ---
         async function copyCode(fileName) {
-            const msg = document.getElementById('loader-msg');
-            msg.innerText = "FETCHING_DATA...";
-            try {
-                const response = await fetch('scripts/' + fileName);
-                if (!response.ok) throw new Error();
-                const text = await response.text();
-                await navigator.clipboard.writeText(text);
-                msg.innerText = "SUCCESS: COPIED_TO_CLIPBOARD";
-                setTimeout(() => msg.innerText = "LIVE TERMINAL ACTIVE v6.1", 2000);
-            } catch (err) {
-                msg.innerText = "ERROR: FILE_NOT_FOUND";
-                msg.style.color = "#ff4d4d";
-                setTimeout(() => { msg.innerText = "LIVE TERMINAL ACTIVE v6.1"; msg.style.color = "var(--accent)"; }, 3000);
-            }
-        }
+    const msg = document.getElementById('loader-msg');
+    msg.innerText = "FETCHING_DATA...";
+    
+    
+    try {
+        const response = await fetch(`./scripts/${fileName}`); 
+        if (!response.ok) throw new Error("File not found");
+        const text = await response.text();
+        await navigator.clipboard.writeText(text);
+        
+        msg.innerText = "SUCCESS: COPIED_TO_CLIPBOARD";
+        setTimeout(() => msg.innerText = "LIVE TERMINAL ACTIVE v6.1", 2000);
+    } catch (err) {
+        msg.innerText = "ERROR: FILE_NOT_FOUND";
+        msg.style.color = "#ff4d4d";
+        console.error("Fetch Error:", err);
+        setTimeout(() => { 
+            msg.innerText = "LIVE TERMINAL ACTIVE v6.1"; 
+            msg.style.color = "var(--accent)"; 
+        }, 3000);
+    }
+}
     </script>
 </body>
+
 </html>
