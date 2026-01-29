@@ -55,7 +55,7 @@
 
         .cat-title {
             color: var(--accent); border-left: 3px solid var(--accent);
-            padding-left: 10px; margin: 30px 0 15px 0; font-size: 1.1rem;
+            padding-left: 10px; margin: 40px 0 15px 0; font-size: 1.1rem;
             letter-spacing: 2px; text-transform: uppercase;
         }
 
@@ -116,12 +116,33 @@
                 <div class="script-card"><h3>Floating Super <span class="tag">BOT</span></h3><button class="copy-btn" onclick="copyCode('Floating Super Bot.js')">Copy Script</button></div>
             </div>
 
-            <div class="cat-title">>_ Site Unlockers</div>
+            <div class="cat-title">>_ Visual & CSS Filters</div>
             <div class="script-grid">
-                <div class="script-card"><h3>Cineru.lk <span class="tag">BYPASS</span></h3><button class="copy-btn" onclick="copyCode('Cineru.lk.js')">Copy Script</button></div>
-                <div class="script-card"><h3>Sinhalawal <span class="tag">BYPASS</span></h3><button class="copy-btn" onclick="copyCode('Sinhalawal.com.js')">Copy Script</button></div>
-                <div class="script-card"><h3>Walakatha <span class="tag">BYPASS</span></h3><button class="copy-btn" onclick="copyCode('Walakatha.com.js')">Copy Script</button></div>
-                <div class="script-card"><h3>PornXnow <span class="tag">BYPASS</span></h3><button class="copy-btn" onclick="copyCode('PornXnow.me.js')">Copy Script</button></div>
+                <div class="script-card">
+                    <h3>Cineru.lk Fix <span class="tag">CSS</span></h3>
+                    <p style="color: #aaa; font-size: 13px;">Removes donate banners and center logo clutter.</p>
+                    <button class="copy-btn" onclick="copyCode('cineru_filter.js')">Copy Filter</button>
+                </div>
+                <div class="script-card">
+                    <h3>Walakatha Cleaner <span class="tag">CSS</span></h3>
+                    <p style="color: #aaa; font-size: 13px;">Removes popups, ad layers, and clears blurs.</p>
+                    <button class="copy-btn" onclick="copyCode('walakatha_filter.js')">Copy Filter</button>
+                </div>
+                <div class="script-card">
+                    <h3>PornXnow Bypass <span class="tag">CSS</span></h3>
+                    <p style="color: #aaa; font-size: 13px;">Blocks VAST players and invisible overlays.</p>
+                    <button class="copy-btn" onclick="copyCode('pornxnow_filter.js')">Copy Filter</button>
+                </div>
+                <div class="script-card">
+                    <h3>Sinhalawal Fix <span class="tag">CSS</span></h3>
+                    <p style="color: #aaa; font-size: 13px;">Removes ad layers and unlocks page scrolling.</p>
+                    <button class="copy-btn" onclick="copyCode('sinhalawal_filter.js')">Copy Filter</button>
+                </div>
+                <div class="script-card">
+                    <h3>Universal Cleaner <span class="tag">FIX</span></h3>
+                    <p style="color: #aaa; font-size: 13px;">Removes grayscale and blur effects universally.</p>
+                    <button class="copy-btn" onclick="copyCode('css_filter_cleaner.js')">Copy Filter</button>
+                </div>
             </div>
 
             <div class="cat-title">>_ Utilities & Tools</div>
@@ -152,6 +173,8 @@
         async function copyCode(fileName) {
             const msg = document.getElementById('loader-msg');
             msg.innerText = "FETCHING_DATA...";
+            msg.style.color = "var(--accent)";
+
             try {
                 const response = await fetch(`./scripts/${fileName}`); 
                 if (!response.ok) throw new Error("File not found");
