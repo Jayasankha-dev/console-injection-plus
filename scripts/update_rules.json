@@ -1,0 +1,534 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*jnbhi.com*",
+      "resourceTypes": [
+        "script",
+        "sub_frame",
+        "xmlhttprequest"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 10,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*leegloapeegrep.net*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script",
+        "xmlhttprequest"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*m1rs.com*",
+      "resourceTypes": [
+        "script",
+        "sub_frame",
+        "xmlhttprequest"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*voytingsu.net*",
+      "resourceTypes": [
+        "script",
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*monetag.com*",
+      "resourceTypes": [
+        "script",
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*12a2101ae7.com*",
+      "resourceTypes": [
+        "script",
+        "sub_frame",
+        "xmlhttprequest",
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*avchmysuz.com*",
+      "resourceTypes": [
+        "script",
+        "sub_frame",
+        "xmlhttprequest"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*tteobchk.com*",
+      "resourceTypes": [
+        "script",
+        "sub_frame",
+        "xmlhttprequest"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*disable-devtool*",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*ornrucricca.com*",
+      "resourceTypes": [
+        "script",
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*obqj2.com*",
+      "resourceTypes": [
+        "script",
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*anym8.com*",
+      "resourceTypes": [
+        "script",
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||xupobpgarh.com^",
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*.xupobpgarh.com/*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*zpehpylri.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*anjcapap.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*agpgtunukfis.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "priority": 11,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "*://*pxnw.xyz",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "priority": 11,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*anym8.com*",
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "priority": 11,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*lijawxhfip.com*",
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*pzaawtgujvim.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*chob88888.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*vialotadom.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*mammaryblain.digital*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*viiporfu.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*astronautlividlyreformer.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*guidepaparazzisurface.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*capndr.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*axvbuhlmubm.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*sipanhoql.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*otqlcoka.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 32,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*vujguhxtevti.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*aqcvcirudo.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*consistentsoup.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 35,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*biftficc.com/*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 36,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*admanager*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  }
+]
