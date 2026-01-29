@@ -1,0 +1,15 @@
+
+.global-ad-layer {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    z-index: -9999 !important;
+}
+
+
+body {
+    overflow: auto !important;
+}
