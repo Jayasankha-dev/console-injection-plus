@@ -530,5 +530,50 @@
         "script"
       ]
     }
+  },
+  {
+    "id": 37,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*ajrosqokj.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 38,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*fkaffiadcn.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 39,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*duxkhivamju.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
   }
 ]
