@@ -575,5 +575,80 @@
         "script"
       ]
     }
+  },
+  {
+    "id": 40,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*qirkmeozkzu.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 41,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*akfxajkhiaxp.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 42,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*wigapvofjar.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 43,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*bfeagjnp.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 44,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*ey43.com*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "script"
+      ]
+    }
   }
 ]
